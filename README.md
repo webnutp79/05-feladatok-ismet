@@ -4,7 +4,7 @@
 
 ```
 git  --version
-git config --global --ist
+git config --global --list
 git config --global user.name "Username"
 git config --global user.email username@domain.hu
 
@@ -37,6 +37,7 @@ git checkout -b másik-ág
 git merge másik-ág
 git rebase másik-ág
 git rebase --continue
+git rebase --abort
 
 git rm README.md
 git mv css/styles.css assets/css/styles.css
