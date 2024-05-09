@@ -51,3 +51,17 @@ git reset --soft HEAD~1
 
 git branch -d törlendő-ág
 ```
+
+### Ha már létezik a fájl a Git repoban, és be akarjuk tenni a .gitignore-ba:
+
+```
+#.gitignore
+nagyontitkos.txt
+
+#gitbash-ben
+git rm nagyontitkos.txt #Töröljük a fájl-t a reporól
+git add .gitignore      #Hozzáadjuk .gitignore-t a stage-hez
+git commit -m "Nagyon tikos fájl törlése és .gitignore módosítása"  #Commitoljuk a fájltörlést és .gitignore módosítást
+git checkout HEAD~1 -- nagyontitkos.txt     #Visszaszerezzük a törölt fájlt
+git reset nagyontitkos.txt                  # Törölt fájlt levesszük a stage-ről
+```
