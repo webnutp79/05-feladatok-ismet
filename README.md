@@ -51,6 +51,7 @@ git diff HEAD HEAD~1
 git reset --soft HEAD~1
 
 git branch -d törlendő-ág
+git branch --list
 ```
 
 ### Ha már létezik a fájl a Git repoban, és be akarjuk tenni a .gitignore-ba:
