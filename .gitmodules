@@ -1,0 +1,3 @@
+[submodule "Submodule-Repo"]
+	path = Submodule-Repo
+	url = https://github.com/webnutp79/Submodule-Repo.git
