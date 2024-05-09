@@ -1,4 +1,5 @@
-megtitok.txt
 nagyontitkos.txt
 titkos.txt
 titkosabb.txt
+.node_modules/
+.DS_Store
