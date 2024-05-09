@@ -71,14 +71,26 @@ git reset nagyontitkos.txt                  # Törölt fájlt levesszük a stage
 ### GitHub-bal kapcsolatos parancsok
 
 ```
+#Publikus kulcs létrehozása a saját gépen
 ssh-keygen -t rsa -b 4096 -C "email@címed.hu"
+cat c/Users/..../id_rsa.pub              #Ide kerül az id_rsa.pub pontos elérési útvonala, a kimenetet másold fel a GitHub-ra kulcsként
 
+#A Git repoban tároltak (főág) feltöltése a GitHub repoba
 git remote add origin https://github.com/webnutp79/masodik.git
 git branch -M main
 git push -u origin main
 
+#GitHub-on tároltak lehúzása a Git-re
 git pull
-git pull --rebase
+git pull --rebase  #Javasolt a rebase, nem a merge
 
+#Git-en tárotak feltöltése a GitHub-ra
 git push origin main
+
+#ÚJ fejlesztési ág feltöltése a GitHub-ra
+git checkout -b feature-valami
+git push -u origin feature-valami
+
+#Ha GitHub megrendelésre (issue) dolgozunk
+git commit -m "Commit Fixes #2"       # A #2 az issue száma
 ```
