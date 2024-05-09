@@ -67,3 +67,18 @@ git commit -m "Nagyon tikos fájl törlése és .gitignore módosítása"  #Comm
 git checkout HEAD~1 -- nagyontitkos.txt     #Visszaszerezzük a törölt fájlt
 git reset nagyontitkos.txt                  # Törölt fájlt levesszük a stage-ről
 ```
+
+### GitHub-bal kapcsolatos parancsok
+
+```
+ssh-keygen -t rsa -b 4096 -C "email@címed.hu"
+
+git remote add origin https://github.com/webnutp79/masodik.git
+git branch -M main
+git push -u origin main
+
+git pull
+git pull --rebase
+
+git push origin main
+```
