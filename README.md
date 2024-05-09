@@ -94,3 +94,43 @@ git push -u origin feature-valami
 #Ha GitHub megrendelésre (issue) dolgozunk
 git commit -m "Commit Fixes #2"       # A #2 az issue száma
 ```
+## Submodule
+
+### A GitHub Pages-en egedélyezni kell a submodule használatát a ./.github/workflows/static.yml fájlban:
+~~~
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+                  submodules: 'true'
+~~~
+
+### Submodule repojának beillesztése az eredeti repo-ba és feltöltése GitHub-ra az eredeti repo-ba
+~~~
+#Submodule repojának hozzáadása a GitHub-ról
+git submodule add https://github.com/webnutp79/Submodule-Repo.git
+
+#Kommitolás
+git add .
+git commit -m "Submodule-Repo hozzáadása"
+
+#Feltöltés GitHub-ra
+git push origin main
+~~~
+
+### Változtatás végrehajtása után a submodule-on
+~~~
+#Kommitolás
+git add .
+git commit -m "változtatás"
+git push origin main
+~~~
+
+### Változtatás átvezetése az eredeti repo-n
+~~~
+git submodule update --remote --merge
+git add .
+git commit -m "submodule update"
+git push origin main
+~~~
+
